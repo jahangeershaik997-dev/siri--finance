@@ -4,6 +4,33 @@ import { useState, FormEvent } from 'react'
 const WHATSAPP_NUMBER = '919059314625'
 const WEB3FORMS_KEY = 'e5230a0d-5e3c-4326-8bb7-ede934da8a28'
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
+
+function fireConversionEvents(loanAmount: string) {
+  if (typeof window === 'undefined' || !window.gtag) return
+  // Google Analytics event
+  window.gtag('event', 'generate_lead', {
+    event_category: 'Lead',
+    event_label: 'Loan Application',
+    value: Number(loanAmount) || 0,
+    currency: 'INR',
+  })
+  // Google Ads conversion
+  const awId = process.env.NEXT_PUBLIC_AW_ID
+  const conversionLabel = process.env.NEXT_PUBLIC_AW_CONVERSION_LABEL
+  if (awId && conversionLabel) {
+    window.gtag('event', 'conversion', {
+      send_to: `${awId}/${conversionLabel}`,
+      value: Number(loanAmount) || 0,
+      currency: 'INR',
+    })
+  }
+}
+
 interface LeadFormProps {
   prefilledAmount?: string
   prefilledBank?: string
@@ -60,6 +87,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
 
       if (response.ok) {
         setStatus('success')
+        fireConversionEvents(formData.loanAmount)
         window.open(buildWhatsAppUrl(formData), '_blank')
       } else {
         setStatus('error')
