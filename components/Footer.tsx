@@ -97,6 +97,36 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="border-t border-gray-800 pt-8 mb-8">
+          <p className="text-white font-semibold text-sm mb-4">Contact Our Loan Advisors</p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="tel:7095899552"
+              className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 transition-colors rounded-xl px-4 py-3"
+            >
+              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+                MM
+              </div>
+              <div>
+                <p className="text-white text-sm font-semibold">Muthyala Mallesh</p>
+                <p className="text-blue-400 text-xs">Senior Advisor · 70958 99552</p>
+              </div>
+            </a>
+            <a
+              href="tel:9059314625"
+              className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 transition-colors rounded-xl px-4 py-3"
+            >
+              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+                JH
+              </div>
+              <div>
+                <p className="text-white text-sm font-semibold">Jahangeer</p>
+                <p className="text-green-400 text-xs">Loan Advisor · 90593 14625</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-gray-500">© 2024 Siri Finance Technologies Pvt. Ltd. All rights reserved.</p>
           <p className="text-gray-500">Registered in India · RBI Compliant · ISO 27001 Certified</p>

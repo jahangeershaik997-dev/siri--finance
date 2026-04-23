@@ -52,12 +52,39 @@ export default function ApplyPage({ searchParams }: ApplyPageProps) {
           ))}
         </div>
 
-        <div className="mt-6 bg-blue-50 rounded-xl p-4 border border-blue-100 text-center">
-          <p className="text-blue-700 text-sm font-medium">
-            Need help choosing a loan?{' '}
-            <span className="underline cursor-pointer">Call 1800-XXX-XXXX</span>{' '}
-            (Mon–Sat, 9am–7pm)
+        <div className="mt-6 bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+          <p className="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-4 text-center">
+            Talk to Our Loan Advisors
           </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            <a
+              href="tel:7095899552"
+              className="flex items-center gap-3 bg-blue-50 hover:bg-blue-100 transition-colors rounded-xl p-4 border border-blue-100"
+            >
+              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                MM
+              </div>
+              <div>
+                <p className="text-gray-900 font-semibold text-sm">Muthyala Mallesh</p>
+                <p className="text-blue-600 text-xs font-medium">Senior Loan Advisor</p>
+                <p className="text-gray-700 text-sm font-bold mt-0.5">70958 99552</p>
+              </div>
+            </a>
+            <a
+              href="tel:9059314625"
+              className="flex items-center gap-3 bg-green-50 hover:bg-green-100 transition-colors rounded-xl p-4 border border-green-100"
+            >
+              <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                JH
+              </div>
+              <div>
+                <p className="text-gray-900 font-semibold text-sm">Jahangeer</p>
+                <p className="text-green-600 text-xs font-medium">Loan Advisor</p>
+                <p className="text-gray-700 text-sm font-bold mt-0.5">90593 14625</p>
+              </div>
+            </a>
+          </div>
+          <p className="text-center text-xs text-gray-400 mt-3">Available Mon–Sat, 9am–7pm IST</p>
         </div>
       </div>
     </div>
