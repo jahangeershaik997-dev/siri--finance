@@ -2,8 +2,16 @@ import type { Metadata } from 'next'
 import LeadForm from '@/components/LeadForm'
 
 export const metadata: Metadata = {
-  title: 'Apply for a Loan — Siri Finance',
-  description: 'Apply for a personal loan in minutes. Our team will match you with the best offers.',
+  title: 'Apply for a Personal Loan — Instant Approval | Siri Finance',
+  description:
+    'Apply for a personal loan in minutes. Get matched with the best offers from SBI, HDFC, ICICI & more. Lowest rates from 10.25% p.a. Our advisor will call you within 24 hours.',
+  keywords: ['apply personal loan online', 'personal loan application', 'instant loan approval India'],
+  alternates: { canonical: 'https://siri-finance-knax.vercel.app/apply' },
+  openGraph: {
+    title: 'Apply for a Personal Loan — Siri Finance',
+    description: 'Apply in minutes. Get best offers from 50+ lenders. Free service.',
+    url: 'https://siri-finance-knax.vercel.app/apply',
+  },
 }
 
 const trustBadges = [

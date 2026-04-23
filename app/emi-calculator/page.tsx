@@ -3,8 +3,22 @@ import EmiCalculator from '@/components/EmiCalculator'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'EMI Calculator — Siri Finance',
-  description: 'Calculate your loan EMI instantly. Plan repayments with our free EMI calculator.',
+  title: 'Free EMI Calculator — Personal Loan EMI Calculator India 2024',
+  description:
+    'Calculate your personal loan EMI instantly. Use our free EMI calculator to plan monthly repayments. Formula: EMI = P×r×(1+r)^n/((1+r)^n-1). Adjust amount, rate & tenure.',
+  keywords: [
+    'EMI calculator',
+    'personal loan EMI calculator',
+    'loan EMI calculator India',
+    'monthly EMI calculator',
+    'home loan EMI calculator',
+  ],
+  alternates: { canonical: 'https://siri-finance-knax.vercel.app/emi-calculator' },
+  openGraph: {
+    title: 'Free EMI Calculator — Siri Finance',
+    description: 'Calculate personal loan EMI instantly. Free tool. Adjust amount, rate & tenure.',
+    url: 'https://siri-finance-knax.vercel.app/emi-calculator',
+  },
 }
 
 const faqs = [
