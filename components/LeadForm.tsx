@@ -2,7 +2,7 @@
 import { useState, FormEvent } from 'react'
 
 const WHATSAPP_NUMBER = '919059314625'
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xjgjjedp'
+const WEB3FORMS_KEY = 'e5230a0d-5e3c-4326-8bb7-ede934da8a28'
 
 interface LeadFormProps {
   prefilledAmount?: string
@@ -43,16 +43,18 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
     setStatus('loading')
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
         },
         body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `New Loan Application — ${formData.name}`,
+          from_name: 'Siri Finance',
           ...formData,
           bank: prefilledBank || 'Not specified',
-          _subject: `New Loan Application — ${formData.name}`,
         }),
       })
 
@@ -110,16 +112,17 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
   return (
     <form
       onSubmit={handleSubmit}
-      action={FORMSPREE_ENDPOINT}
+      action="https://api.web3forms.com/submit"
       method="POST"
       className="space-y-5"
     >
+      <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
       {status === 'error' && (
         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm flex items-center gap-2">
           <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          Something went wrong. Please try again or WhatsApp us at 90593 14625.
+          Submission failed. Please try again or WhatsApp us directly at 90593 14625.
         </div>
       )}
 
