@@ -12,7 +12,7 @@ const stats = [
   { value: '₹500Cr+', label: 'Loans Disbursed' },
   { value: '2 Lakh+', label: 'Satisfied Customers' },
   { value: '50+', label: 'Lending Partners' },
-  { value: '10.25%', label: 'Lowest Rate p.a.' },
+  { value: '9.75%', label: 'Lowest Personal Loan Rate' },
 ]
 
 export default function HomePage() {

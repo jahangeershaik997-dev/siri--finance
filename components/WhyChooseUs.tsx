@@ -24,7 +24,7 @@ const reasons = [
       </svg>
     ),
     title: 'Lowest Interest Rates',
-    description: 'Our smart algorithm finds the lowest applicable rate for your profile. Personal loans starting from 10.25% p.a.',
+    description: 'Our smart algorithm finds the lowest applicable rate for your profile. Personal loans starting from 9.75% p.a.',
   },
   {
     icon: (

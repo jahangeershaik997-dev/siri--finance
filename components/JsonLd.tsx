@@ -21,7 +21,7 @@ export default function JsonLd() {
         offers: {
           '@type': 'AggregateOffer',
           priceCurrency: 'INR',
-          description: 'Personal loans starting from 10.25% p.a.',
+          description: 'Personal loans from 9.75% p.a. Home loans from 7.15% p.a.',
         },
       },
       {
@@ -44,7 +44,7 @@ export default function JsonLd() {
             name: 'What is the minimum salary required for a personal loan?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Most banks require a minimum monthly salary of ₹25,000. NBFCs like Bajaj Finance and Fullerton India accept salaries as low as ₹15,000–₹20,000.',
+              text: 'Minimum monthly salary accepted is ₹15,000. Banks typically require ₹25,000+. NBFCs like Bajaj Finance, Tata Capital, and Fullerton India accept from ₹15,000.',
             },
           },
           {
@@ -60,7 +60,7 @@ export default function JsonLd() {
             name: 'What is the lowest interest rate on personal loans in India?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'HDFC Bank offers personal loans starting at 10.25% p.a. SBI starts at 10.5% p.a. Rates depend on your credit score, salary, and employer.',
+              text: 'Personal loans start from 9.75% p.a. Home loans from 7.15% p.a. through Siri Finance. Rates depend on your credit score, salary, and employer profile.',
             },
           },
           {

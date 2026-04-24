@@ -15,7 +15,7 @@ export default function HomeLoanOffers() {
               Own Your Dream Home
             </h2>
             <p className="text-gray-600 text-lg">
-              Home loans starting from 8.25% p.a. — compare & choose the best offer
+              Home loans starting from 7.15% p.a. — compare & choose the best offer
             </p>
           </div>
           <Link

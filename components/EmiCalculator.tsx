@@ -12,8 +12,8 @@ const TABS: { id: LoanTab; label: string }[] = [
 ]
 
 const TAB_PRESETS: Record<LoanTab, { principal: number; rate: number; tenure: number; maxPrincipal: number; maxTenure: number; principalStep: number }> = {
-  personal: { principal: 500000, rate: 10.5, tenure: 36, maxPrincipal: 5000000, maxTenure: 84, principalStep: 50000 },
-  home: { principal: 3000000, rate: 8.5, tenure: 240, maxPrincipal: 20000000, maxTenure: 360, principalStep: 100000 },
+  personal: { principal: 500000, rate: 9.75, tenure: 36, maxPrincipal: 5000000, maxTenure: 84, principalStep: 50000 },
+  home: { principal: 3000000, rate: 7.15, tenure: 240, maxPrincipal: 20000000, maxTenure: 360, principalStep: 100000 },
   business: { principal: 1000000, rate: 14, tenure: 60, maxPrincipal: 10000000, maxTenure: 84, principalStep: 100000 },
 }
 
