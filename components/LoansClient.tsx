@@ -34,7 +34,7 @@ function LoansContent() {
     [salary, creditScore, maxRate, minAmount],
   )
 
-  const isLowSalary = salary > 0 && salary < 25000
+  const isLowSalary = salary > 0 && salary >= 15000 && salary < 25000
   const isExcellentProfile = salary >= 25000 && creditScore > 750
 
   return (
@@ -81,7 +81,7 @@ function LoansContent() {
               </svg>
               <div>
                 <p className="text-yellow-800 font-semibold text-sm">Showing NBFC Loans for Your Salary Range</p>
-                <p className="text-yellow-700 text-xs mt-0.5">With a monthly salary below ₹25,000, NBFCs offer better eligibility with flexible criteria.</p>
+                <p className="text-yellow-700 text-xs mt-0.5">Salary ₹15K–₹25K: NBFCs like Bajaj Finance, Tata Capital & Fullerton offer flexible eligibility. Minimum salary accepted is ₹15,000.</p>
               </div>
             </div>
           )}

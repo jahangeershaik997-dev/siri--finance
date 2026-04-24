@@ -139,10 +139,10 @@ export const ALL_LOANS: LoanOffer[] = [
     minTenure: 12,
     maxTenure: 84,
     processingFee: 'Up to 3.93% of loan amount',
-    minSalary: 20000,
+    minSalary: 15000,
     minCreditScore: 650,
     featured: true,
-    features: ['Instant approval', 'Flexible EMI options', 'Salary-based eligibility'],
+    features: ['Instant approval', 'Flexible EMI options', 'Salary from ₹15K'],
   },
   {
     id: 'tata-personal',
@@ -157,10 +157,10 @@ export const ALL_LOANS: LoanOffer[] = [
     minTenure: 12,
     maxTenure: 72,
     processingFee: 'Up to 2.75% of loan amount',
-    minSalary: 20000,
+    minSalary: 15000,
     minCreditScore: 650,
     featured: false,
-    features: ['No end-use restriction', 'Quick processing', 'Dedicated relationship manager'],
+    features: ['No end-use restriction', 'Quick processing', 'Salary from ₹15K'],
   },
   {
     id: 'fullerton-personal',
@@ -178,7 +178,7 @@ export const ALL_LOANS: LoanOffer[] = [
     minSalary: 15000,
     minCreditScore: 600,
     featured: false,
-    features: ['Loans for self-employed', 'Minimal documentation', 'Doorstep service'],
+    features: ['Self-employed accepted', 'Minimal documentation', 'Salary from ₹15K'],
   },
 ]
 
@@ -260,6 +260,7 @@ export function filterLoans(
 ): LoanOffer[] {
   return loans.filter((loan) => {
     if (salary > 0 && salary < 25000 && loan.type === 'bank') return false
+    if (salary > 0 && salary < 15000) return false  // min salary 15k
     if (creditScore > 750 && loan.maxRate > 15) return false
     if (maxRate && loan.minRate > maxRate) return false
     if (minLoanAmount && loan.maxAmount < minLoanAmount) return false

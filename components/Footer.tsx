@@ -36,28 +36,38 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Products</h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/loans" className="hover:text-gold transition-colors">
-                  Personal Loans
+                <Link href="/loans?tab=personal" className="hover:text-gold transition-colors">
+                  Personal Loan
                 </Link>
               </li>
               <li>
-                <Link href="/loans" className="hover:text-gold transition-colors">
-                  Home Loans
+                <Link href="/loans?tab=home" className="hover:text-gold transition-colors">
+                  Home Loan
                 </Link>
               </li>
               <li>
-                <Link href="/loans" className="hover:text-gold transition-colors">
-                  Business Loans
+                <Link href="/loans?tab=mortgage" className="hover:text-gold transition-colors">
+                  Mortgage Loan
+                </Link>
+              </li>
+              <li>
+                <Link href="/loans?tab=business" className="hover:text-gold transition-colors">
+                  Business Loan
+                </Link>
+              </li>
+              <li>
+                <Link href="/loans?tab=car" className="hover:text-gold transition-colors">
+                  Car Loan
+                </Link>
+              </li>
+              <li>
+                <Link href="/loans?tab=plot" className="hover:text-gold transition-colors">
+                  Open Plot Loan
                 </Link>
               </li>
               <li>
                 <Link href="/emi-calculator" className="hover:text-gold transition-colors">
                   EMI Calculator
-                </Link>
-              </li>
-              <li>
-                <Link href="/loans" className="hover:text-gold transition-colors">
-                  Loan Against Property
                 </Link>
               </li>
             </ul>

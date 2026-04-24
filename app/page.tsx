@@ -2,6 +2,7 @@ import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import LoanOffers from '@/components/LoanOffers'
 import HomeLoanOffers from '@/components/HomeLoanOffers'
+import PropertyLoansSection from '@/components/PropertyLoansSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import LeadForm from '@/components/LeadForm'
@@ -38,6 +39,7 @@ export default function HomePage() {
 
       <LoanOffers />
       <HomeLoanOffers />
+      <PropertyLoansSection />
       <WhyChooseUs />
 
       {/* EMI Calculator CTA */}
