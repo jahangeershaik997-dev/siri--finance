@@ -16,24 +16,24 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
+    <section className="bg-gradient-to-br from-[#0F2B46] via-[#1A3A5C] to-[#0F2B46] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center bg-blue-700/50 border border-blue-600/50 text-blue-200 text-sm px-4 py-1.5 rounded-full mb-6">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+            <div className="inline-flex items-center bg-white/10 border border-gold/30 text-gold-light text-sm px-4 py-1.5 rounded-full mb-6">
+              <span className="w-2 h-2 bg-gold rounded-full mr-2 animate-pulse"></span>
               India&apos;s #1 Loan Aggregator Platform
             </div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
               Smart Loans.
               <br />
-              <span className="text-green-400">Faster Decisions.</span>
+              <span className="text-gold">Faster Decisions.</span>
             </h1>
-            <p className="text-blue-200 text-lg mb-8 leading-relaxed max-w-lg">
+            <p className="text-navy-200 text-lg mb-8 leading-relaxed max-w-lg">
               Compare 50+ loan offers from top banks &amp; NBFCs. Get the lowest interest rates and instant approval —
               all in one place. 100% free.
             </p>
-            <div className="flex flex-wrap gap-6 text-sm text-blue-200">
+            <div className="flex flex-wrap gap-6 text-sm text-navy-200">
               {[
                 '100% Free Service',
                 '50+ Loan Partners',
@@ -41,7 +41,7 @@ export default function HeroSection() {
                 'No CIBIL Impact',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   {item}
@@ -51,13 +51,13 @@ export default function HeroSection() {
           </div>
 
           <div className="bg-white text-gray-900 rounded-2xl p-7 shadow-2xl">
-            <h2 className="text-xl font-bold mb-6 text-gray-800">Check Your Loan Eligibility</h2>
+            <h2 className="text-xl font-bold mb-6 text-navy">Check Your Loan Eligibility</h2>
 
             <div className="space-y-6">
               <div>
                 <div className="flex justify-between mb-2">
                   <label className="text-sm font-medium text-gray-600">Loan Amount Required</label>
-                  <span className="text-sm font-bold text-blue-600">{formatCurrency(loanAmount)}</span>
+                  <span className="text-sm font-bold text-navy">{formatCurrency(loanAmount)}</span>
                 </div>
                 <input
                   type="range"
@@ -66,7 +66,7 @@ export default function HeroSection() {
                   step="50000"
                   value={loanAmount}
                   onChange={(e) => setLoanAmount(Number(e.target.value))}
-                  className="w-full h-2 rounded-full accent-blue-600 cursor-pointer"
+                  className="w-full h-2 rounded-full cursor-pointer"
                 />
                 <div className="flex justify-between text-xs text-gray-400 mt-1.5">
                   <span>₹50K</span>
@@ -77,7 +77,7 @@ export default function HeroSection() {
               <div>
                 <div className="flex justify-between mb-2">
                   <label className="text-sm font-medium text-gray-600">Monthly Salary</label>
-                  <span className="text-sm font-bold text-blue-600">{formatCurrency(salary)}</span>
+                  <span className="text-sm font-bold text-navy">{formatCurrency(salary)}</span>
                 </div>
                 <input
                   type="range"
@@ -86,7 +86,7 @@ export default function HeroSection() {
                   step="5000"
                   value={salary}
                   onChange={(e) => setSalary(Number(e.target.value))}
-                  className="w-full h-2 rounded-full accent-blue-600 cursor-pointer"
+                  className="w-full h-2 rounded-full cursor-pointer"
                 />
                 <div className="flex justify-between text-xs text-gray-400 mt-1.5">
                   <span>₹10K</span>
@@ -108,7 +108,7 @@ export default function HeroSection() {
                   step="10"
                   value={creditScore}
                   onChange={(e) => setCreditScore(Number(e.target.value))}
-                  className="w-full h-2 rounded-full accent-blue-600 cursor-pointer"
+                  className="w-full h-2 rounded-full cursor-pointer"
                 />
                 <div className="flex justify-between text-xs mt-1.5">
                   <span className="text-red-400">Poor (300)</span>
@@ -118,7 +118,7 @@ export default function HeroSection() {
 
               <button
                 onClick={handleCheckEligibility}
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg shadow-blue-200 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full bg-gradient-to-r from-navy to-navy-light text-white py-4 rounded-xl font-semibold text-lg hover:from-navy-light hover:to-navy transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
               >
                 Check Eligibility →
               </button>

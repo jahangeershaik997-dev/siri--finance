@@ -1,16 +1,14 @@
 import Link from 'next/link'
+import SiriFinanceLogo from './SiriFinanceLogo'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400">
+    <footer className="bg-navy-dark text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2.5 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-green-400 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SF</span>
-              </div>
-              <span className="text-xl font-bold text-white">Siri Finance</span>
+            <div className="mb-4">
+              <SiriFinanceLogo size={36} textColor="#ffffff" />
             </div>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-md text-sm">
               India&apos;s smart loan aggregation platform. Compare personal loans, home loans, and business loans from
@@ -21,12 +19,12 @@ export default function Footer() {
                 <p className="text-white text-2xl font-bold">₹500Cr+</p>
                 <p className="text-xs text-gray-500 mt-0.5">Loans Disbursed</p>
               </div>
-              <div className="w-px bg-gray-800"></div>
+              <div className="w-px bg-navy-light"></div>
               <div>
                 <p className="text-white text-2xl font-bold">2L+</p>
                 <p className="text-xs text-gray-500 mt-0.5">Happy Customers</p>
               </div>
-              <div className="w-px bg-gray-800"></div>
+              <div className="w-px bg-navy-light"></div>
               <div>
                 <p className="text-white text-2xl font-bold">50+</p>
                 <p className="text-xs text-gray-500 mt-0.5">Lending Partners</p>
@@ -38,27 +36,27 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Products</h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/loans" className="hover:text-white transition-colors">
+                <Link href="/loans" className="hover:text-gold transition-colors">
                   Personal Loans
                 </Link>
               </li>
               <li>
-                <Link href="/loans" className="hover:text-white transition-colors">
+                <Link href="/loans" className="hover:text-gold transition-colors">
                   Home Loans
                 </Link>
               </li>
               <li>
-                <Link href="/loans" className="hover:text-white transition-colors">
+                <Link href="/loans" className="hover:text-gold transition-colors">
                   Business Loans
                 </Link>
               </li>
               <li>
-                <Link href="/emi-calculator" className="hover:text-white transition-colors">
+                <Link href="/emi-calculator" className="hover:text-gold transition-colors">
                   EMI Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/loans" className="hover:text-white transition-colors">
+                <Link href="/loans" className="hover:text-gold transition-colors">
                   Loan Against Property
                 </Link>
               </li>
@@ -69,27 +67,27 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Company</h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link href="#" className="hover:text-gold transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/apply" className="hover:text-white transition-colors">
+                <Link href="/apply" className="hover:text-gold transition-colors">
                   Apply Now
                 </Link>
               </li>
               <li>
-                <Link href="/admin" className="hover:text-white transition-colors">
+                <Link href="/admin" className="hover:text-gold transition-colors">
                   Partner Portal
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link href="#" className="hover:text-gold transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link href="#" className="hover:text-gold transition-colors">
                   Terms of Service
                 </Link>
               </li>
@@ -97,38 +95,38 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 mb-8">
+        <div className="border-t border-navy-light pt-8 mb-8">
           <p className="text-white font-semibold text-sm mb-4">Contact Our Loan Advisors</p>
           <div className="flex flex-wrap gap-4">
             <a
               href="tel:7095899552"
-              className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 transition-colors rounded-xl px-4 py-3"
+              className="flex items-center gap-3 bg-navy-light hover:bg-navy transition-colors rounded-xl px-4 py-3"
             >
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+              <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center text-navy font-bold text-xs flex-shrink-0">
                 MM
               </div>
               <div>
                 <p className="text-white text-sm font-semibold">Muthyala Mallesh</p>
-                <p className="text-blue-400 text-xs">Senior Advisor · 70958 99552</p>
+                <p className="text-gold text-xs">Senior Advisor · 70958 99552</p>
               </div>
             </a>
             <a
               href="tel:9059314625"
-              className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 transition-colors rounded-xl px-4 py-3"
+              className="flex items-center gap-3 bg-navy-light hover:bg-navy transition-colors rounded-xl px-4 py-3"
             >
-              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+              <div className="w-8 h-8 bg-gold-dark rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
                 JH
               </div>
               <div>
                 <p className="text-white text-sm font-semibold">Jahangeer</p>
-                <p className="text-green-400 text-xs">Loan Advisor · 90593 14625</p>
+                <p className="text-gold-light text-xs">Loan Advisor · 90593 14625</p>
               </div>
             </a>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p className="text-gray-500">© 2024 Siri Finance Technologies Pvt. Ltd. All rights reserved.</p>
+        <div className="border-t border-navy-light pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <p className="text-gray-500">© 2026 Siri Finance Technologies Pvt. Ltd. All rights reserved.</p>
           <p className="text-gray-500">Registered in India · RBI Compliant · ISO 27001 Certified</p>
         </div>
       </div>

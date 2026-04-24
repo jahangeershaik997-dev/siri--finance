@@ -182,6 +182,75 @@ export const ALL_LOANS: LoanOffer[] = [
   },
 ]
 
+export interface HomeLoanOffer {
+  id: string
+  bank: string
+  bankInitials: string
+  color: string
+  minRate: number
+  maxRate: number
+  maxAmount: number
+  maxTenure: number
+  processingFee: string
+  featured: boolean
+  features: string[]
+}
+
+export const HOME_LOANS: HomeLoanOffer[] = [
+  {
+    id: 'hdfc-home',
+    bank: 'HDFC Bank',
+    bankInitials: 'HDFC',
+    color: '#004c8c',
+    minRate: 8.25,
+    maxRate: 9.75,
+    maxAmount: 100000000,
+    maxTenure: 360,
+    processingFee: 'Up to 0.5% of loan amount',
+    featured: true,
+    features: ['Competitive rates', 'Up to 90% financing', 'Flexible EMI'],
+  },
+  {
+    id: 'sbi-home',
+    bank: 'State Bank of India',
+    bankInitials: 'SBI',
+    color: '#1a3a6b',
+    minRate: 8.40,
+    maxRate: 10.15,
+    maxAmount: 100000000,
+    maxTenure: 360,
+    processingFee: '0.35% of loan amount',
+    featured: true,
+    features: ['Government bank trust', 'Zero prepayment penalty', '30-year tenure'],
+  },
+  {
+    id: 'lic-home',
+    bank: 'LIC Housing Finance',
+    bankInitials: 'LIC',
+    color: '#00539b',
+    minRate: 8.35,
+    maxRate: 9.90,
+    maxAmount: 150000000,
+    maxTenure: 360,
+    processingFee: 'Up to 0.25% of loan amount',
+    featured: true,
+    features: ['Trusted brand', 'Low processing fee', 'Up to ₹15 Cr'],
+  },
+  {
+    id: 'icici-home',
+    bank: 'ICICI Bank',
+    bankInitials: 'ICICI',
+    color: '#f96714',
+    minRate: 8.60,
+    maxRate: 9.85,
+    maxAmount: 100000000,
+    maxTenure: 360,
+    processingFee: '0.5% of loan amount',
+    featured: false,
+    features: ['Digital process', 'Pre-approved offers', 'Quick disbursal'],
+  },
+]
+
 export function filterLoans(
   loans: LoanOffer[],
   salary: number,

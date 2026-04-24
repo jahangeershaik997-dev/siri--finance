@@ -1,13 +1,20 @@
 import Link from 'next/link'
-import { LoanOffer } from '@/lib/loanEngine'
-import { formatCurrency } from '@/lib/utils'
+import { HomeLoanOffer } from '@/lib/loanEngine'
 
-interface LoanCardProps {
-  loan: LoanOffer
+interface HomeLoanCardProps {
+  loan: HomeLoanOffer
   highlighted?: boolean
 }
 
-export default function LoanCard({ loan, highlighted = false }: LoanCardProps) {
+function formatCr(amount: number): string {
+  if (amount >= 10000000) return `₹${(amount / 10000000).toFixed(0)} Cr`
+  if (amount >= 100000) return `₹${(amount / 100000).toFixed(0)} L`
+  return `₹${amount.toLocaleString('en-IN')}`
+}
+
+export default function HomeLoanCard({ loan, highlighted = false }: HomeLoanCardProps) {
+  const tenureYears = Math.floor(loan.maxTenure / 12)
+
   return (
     <div
       className={`bg-white rounded-2xl border transition-all duration-200 hover:shadow-md ${
@@ -17,7 +24,7 @@ export default function LoanCard({ loan, highlighted = false }: LoanCardProps) {
       {loan.featured && (
         <div className="inline-flex items-center bg-gold-50 text-gold-dark text-xs font-semibold px-2.5 py-1 rounded-full mb-4 border border-gold/20">
           <span className="w-1.5 h-1.5 bg-gold rounded-full mr-1.5"></span>
-          Recommended
+          Top Pick
         </div>
       )}
 
@@ -31,12 +38,8 @@ export default function LoanCard({ loan, highlighted = false }: LoanCardProps) {
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 text-sm leading-tight">{loan.bank}</h3>
-            <span
-              className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                loan.type === 'bank' ? 'bg-navy-50 text-navy' : 'bg-orange-50 text-orange-600'
-              }`}
-            >
-              {loan.type === 'bank' ? 'Scheduled Bank' : 'NBFC'}
+            <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-navy-50 text-navy">
+              Home Loan
             </span>
           </div>
         </div>
@@ -48,18 +51,16 @@ export default function LoanCard({ loan, highlighted = false }: LoanCardProps) {
 
       <div className="grid grid-cols-3 gap-2.5 mb-5">
         <div className="bg-gray-50 rounded-xl p-3 text-center">
-          <p className="text-xs text-gray-500 mb-1">Max Amount</p>
-          <p className="text-sm font-semibold text-gray-800">{formatCurrency(loan.maxAmount)}</p>
+          <p className="text-xs text-gray-500 mb-1">Max Loan</p>
+          <p className="text-sm font-semibold text-gray-800">{formatCr(loan.maxAmount)}</p>
         </div>
         <div className="bg-gray-50 rounded-xl p-3 text-center">
           <p className="text-xs text-gray-500 mb-1">Max Tenure</p>
-          <p className="text-sm font-semibold text-gray-800">
-            {loan.maxTenure >= 12 ? `${Math.floor(loan.maxTenure / 12)} Yrs` : `${loan.maxTenure} Mo`}
-          </p>
+          <p className="text-sm font-semibold text-gray-800">{tenureYears} Yrs</p>
         </div>
         <div className="bg-gray-50 rounded-xl p-3 text-center">
-          <p className="text-xs text-gray-500 mb-1">Min Salary</p>
-          <p className="text-sm font-semibold text-gray-800">{formatCurrency(loan.minSalary)}</p>
+          <p className="text-xs text-gray-500 mb-1">Processing</p>
+          <p className="text-sm font-semibold text-gray-800 truncate">{loan.processingFee.split(' ')[0]}</p>
         </div>
       </div>
 
@@ -76,16 +77,16 @@ export default function LoanCard({ loan, highlighted = false }: LoanCardProps) {
 
       <div className="flex gap-3">
         <Link
-          href={`/apply?bank=${loan.id}&bank_name=${encodeURIComponent(loan.bank)}`}
+          href={`/apply?type=home&bank=${loan.id}&bank_name=${encodeURIComponent(loan.bank)}`}
           className="flex-1 text-center bg-navy text-white py-3 rounded-xl font-semibold text-sm hover:bg-navy-light transition-colors"
         >
           Apply Now
         </Link>
         <Link
-          href={`/loans`}
+          href="/emi-calculator"
           className="px-4 py-3 rounded-xl font-semibold text-sm text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors"
         >
-          Details
+          EMI
         </Link>
       </div>
     </div>

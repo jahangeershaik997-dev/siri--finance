@@ -12,14 +12,12 @@ declare global {
 
 function fireConversionEvents(loanAmount: string) {
   if (typeof window === 'undefined' || !window.gtag) return
-  // Google Analytics event
   window.gtag('event', 'generate_lead', {
     event_category: 'Lead',
     event_label: 'Loan Application',
     value: Number(loanAmount) || 0,
     currency: 'INR',
   })
-  // Google Ads conversion
   const awId = process.env.NEXT_PUBLIC_AW_ID
   const conversionLabel = process.env.NEXT_PUBLIC_AW_CONVERSION_LABEL
   if (awId && conversionLabel) {
@@ -110,7 +108,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-1">Application Submitted!</h3>
+        <h3 className="text-xl font-bold text-navy mb-1">Application Submitted!</h3>
         <p className="text-gray-600 text-sm mb-5">
           Our team will contact you shortly. A WhatsApp chat should have opened — if not, click below.
         </p>
@@ -128,7 +126,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
           </a>
           <button
             onClick={resetForm}
-            className="text-gray-500 font-medium hover:text-gray-700 text-sm px-4 py-3 rounded-xl border border-gray-200 hover:border-gray-300 transition-colors"
+            className="text-gray-500 font-medium hover:text-navy text-sm px-4 py-3 rounded-xl border border-gray-200 hover:border-navy-100 transition-colors"
           >
             Submit Another
           </button>
@@ -155,7 +153,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
       )}
 
       {prefilledBank && (
-        <div className="bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 text-sm text-blue-700 font-medium">
+        <div className="bg-navy-50 border border-navy-100 rounded-xl px-4 py-3 text-sm text-navy font-medium">
           Applying for: {prefilledBank}
         </div>
       )}
@@ -170,7 +168,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
             value={formData.name}
             onChange={handleChange}
             placeholder="Rajesh Kumar"
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
+            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent transition text-sm"
           />
         </div>
         <div>
@@ -182,7 +180,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
             value={formData.email}
             onChange={handleChange}
             placeholder="rajesh@example.com"
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
+            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent transition text-sm"
           />
         </div>
       </div>
@@ -197,7 +195,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
             value={formData.phone}
             onChange={handleChange}
             placeholder="98765 43210"
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
+            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent transition text-sm"
           />
         </div>
         <div>
@@ -210,7 +208,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
             onChange={handleChange}
             placeholder="50000"
             min="10000"
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
+            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent transition text-sm"
           />
         </div>
       </div>
@@ -226,7 +224,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
             onChange={handleChange}
             placeholder="500000"
             min="50000"
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
+            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent transition text-sm"
           />
         </div>
         <div>
@@ -240,7 +238,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
             placeholder="750"
             min="300"
             max="900"
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm"
+            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent transition text-sm"
           />
         </div>
       </div>
@@ -250,7 +248,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-xl font-semibold text-base hover:from-blue-700 hover:to-blue-800 disabled:opacity-70 disabled:cursor-not-allowed transition-all shadow-lg shadow-blue-100"
+        className="w-full bg-gradient-to-r from-navy to-navy-light text-white py-4 rounded-xl font-semibold text-base hover:from-navy-light hover:to-navy disabled:opacity-70 disabled:cursor-not-allowed transition-all shadow-lg"
       >
         {status === 'loading' ? (
           <span className="flex items-center justify-center gap-2">
