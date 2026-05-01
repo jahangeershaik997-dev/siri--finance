@@ -11,9 +11,9 @@ import LeadForm from '@/components/LeadForm'
 
 const stats = [
   { value: '₹500Cr+', label: 'Loans Disbursed', icon: '💰' },
-  { value: '2 Lakh+', label: 'Happy Customers', icon: '😊' },
-  { value: '50+', label: 'Lending Partners', icon: '🏦' },
-  { value: '7.15%', label: 'Home Loan From', icon: '📉' },
+  { value: '150+', label: 'Lending Partners', icon: '🏦' },
+  { value: '10+', label: 'Years of Trust', icon: '🏆' },
+  { value: '7.15%*', label: 'Home Loan From', icon: '📉' },
 ]
 
 export default function HomePage() {
@@ -33,6 +33,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <p className="text-center text-xs text-gray-400 mt-4">*T&amp;C Apply. Interest rates subject to bank eligibility and credit profile.</p>
         </div>
       </div>
 
@@ -94,14 +95,14 @@ export default function HomePage() {
 
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:7095899552"
+              href="tel:9985899552"
               className="flex items-center gap-3 rounded-xl px-5 py-3 hover:opacity-90 transition-all"
               style={{ background: 'linear-gradient(135deg, #1c7fe8, #0F2B46)' }}
             >
               <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">MM</div>
               <div>
                 <p className="text-xs text-white/70">Senior Advisor</p>
-                <p className="text-sm font-bold text-white">M. Mallesh · 70958 99552</p>
+                <p className="text-sm font-bold text-white">M. Mallesh · 99858 99552</p>
               </div>
             </a>
             <a

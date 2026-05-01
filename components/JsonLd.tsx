@@ -8,10 +8,10 @@ export default function JsonLd() {
         name: 'Siri Finance',
         url: 'https://siri-finance-knax.vercel.app',
         description:
-          'India\'s smart loan aggregation platform. Compare personal loans, home loans, and business loans from 50+ lenders.',
+          'India\'s smart loan aggregation platform. Compare personal loans, home loans, and business loans from 150+ lenders.',
         areaServed: 'IN',
         currenciesAccepted: 'INR',
-        telephone: '+917095899552',
+        telephone: '+919985899552',
         email: 'jahangeershaik997@gmail.com',
         address: {
           '@type': 'PostalAddress',

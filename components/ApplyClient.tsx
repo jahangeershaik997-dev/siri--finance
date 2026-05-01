@@ -84,7 +84,7 @@ export default function ApplyClient({ defaultType = 'personal', prefilledAmount 
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             <a
-              href="tel:7095899552"
+              href="tel:9985899552"
               className="flex items-center gap-3 bg-navy-50 hover:bg-navy-100 transition-colors rounded-xl p-4 border border-navy-100"
             >
               <div className="w-10 h-10 bg-navy rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
@@ -93,7 +93,7 @@ export default function ApplyClient({ defaultType = 'personal', prefilledAmount 
               <div>
                 <p className="text-gray-900 font-semibold text-sm">Muthyala Mallesh</p>
                 <p className="text-navy text-xs font-medium">Senior Loan Advisor</p>
-                <p className="text-gray-700 text-sm font-bold mt-0.5">70958 99552</p>
+                <p className="text-gray-700 text-sm font-bold mt-0.5">99858 99552</p>
               </div>
             </a>
             <a

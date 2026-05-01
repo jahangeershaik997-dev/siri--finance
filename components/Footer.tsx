@@ -60,13 +60,13 @@ export default function Footer() {
               </div>
               <div className="w-px bg-navy-light"></div>
               <div>
-                <p className="text-white text-2xl font-bold">2L+</p>
-                <p className="text-xs text-gray-500 mt-0.5">Happy Customers</p>
+                <p className="text-white text-2xl font-bold">150+</p>
+                <p className="text-xs text-gray-500 mt-0.5">Lending Partners</p>
               </div>
               <div className="w-px bg-navy-light"></div>
               <div>
-                <p className="text-white text-2xl font-bold">50+</p>
-                <p className="text-xs text-gray-500 mt-0.5">Lending Partners</p>
+                <p className="text-white text-2xl font-bold">10+</p>
+                <p className="text-xs text-gray-500 mt-0.5">Years of Trust</p>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function Footer() {
           <p className="text-white font-semibold text-sm mb-4">Contact Our Loan Advisors</p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="tel:7095899552"
+              href="tel:9985899552"
               className="flex items-center gap-3 bg-navy-light hover:bg-navy transition-colors rounded-xl px-4 py-3"
             >
               <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0" style={{ backgroundColor: '#1c7fe8' }}>
@@ -120,7 +120,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-white text-sm font-semibold">M. Mallesh</p>
-                <p className="text-xs" style={{ color: '#1c7fe8' }}>Senior Advisor · 70958 99552</p>
+                <p className="text-xs" style={{ color: '#1c7fe8' }}>Senior Advisor · 99858 99552</p>
               </div>
             </a>
             <a
@@ -141,7 +141,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-navy-light pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-gray-500">© 2026 Siri Financial Services. All rights reserved.</p>
-          <p className="text-gray-500">Ameerpet, Hyderabad · RBI Compliant · Trusted Since 2020</p>
+          <p className="text-gray-500">Ameerpet, Hyderabad · One Stop Solution for All Financial Needs</p>
         </div>
       </div>
     </footer>

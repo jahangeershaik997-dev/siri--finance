@@ -90,7 +90,7 @@ export default function EmiCalculatorPage() {
 
       <div className="mt-10 text-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Found Your Ideal EMI?</h3>
-        <p className="text-gray-600 text-sm mb-5">Now compare real loan offers from 50+ banks and NBFCs to match it.</p>
+        <p className="text-gray-600 text-sm mb-5">Now compare real loan offers from 1150+ banks and NBFCs to match it.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href="/loans"

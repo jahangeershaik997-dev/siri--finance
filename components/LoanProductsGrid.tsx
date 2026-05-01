@@ -1,18 +1,19 @@
 import Link from 'next/link'
 
 const PRODUCTS = [
-  { icon: '👤', title: 'Personal Loan', rate: 'From 9.75% p.a.', desc: 'Salary from ₹15K. Quick approval. Banks & NBFCs.', href: '/loans?tab=personal', color: '#1c7fe8', bg: '#eff6ff' },
-  { icon: '🏠', title: 'Home Loan', rate: 'From 7.15% p.a.', desc: 'Salaried, Self-employed & NRI. Upto ₹100 Cr.', href: '/loans?tab=home', color: '#2d8a4e', bg: '#f0fdf4' },
-  { icon: '🏢', title: 'Mortgage Loan', rate: 'Best ROI', desc: 'Loan Against Property. Upto ₹1000 Cr.', href: '/loans?tab=mortgage', color: '#7b3bbf', bg: '#faf5ff' },
+  { icon: '👤', title: 'Personal Loan', rate: 'From 9.75% p.a.*', desc: 'Salary from ₹15K. Quick approval. Banks & NBFCs.', href: '/loans?tab=personal', color: '#1c7fe8', bg: '#eff6ff' },
+  { icon: '🏠', title: 'Home Loan', rate: 'From 7.15% p.a.*', desc: 'Salaried, Self-employed & NRI. Upto ₹100 Cr.', href: '/loans?tab=home', color: '#2d8a4e', bg: '#f0fdf4' },
+  { icon: '🏢', title: 'Mortgage Loan', rate: 'Best ROI*', desc: 'Loan Against Property. Upto ₹1000 Cr.', href: '/loans?tab=mortgage', color: '#7b3bbf', bg: '#faf5ff' },
   { icon: '💼', title: 'Business Loan', rate: 'Flexible Terms', desc: 'With / without income proof. All business types.', href: '/loans?tab=business', color: '#e05526', bg: '#fff7ed' },
   { icon: '🏗️', title: 'Construction Loan', rate: 'Custom Plans', desc: 'Self-construction, builder, mestri & plot+construction.', href: '/loans?tab=construction', color: '#0f766e', bg: '#f0fdfa' },
   { icon: '🚗', title: 'Car Loan', rate: 'Low EMI', desc: 'New & used vehicles. All major brands.', href: '/loans?tab=car', color: '#b45309', bg: '#fffbeb' },
-  { icon: '🎓', title: 'Education Loan', rate: 'Special Rates', desc: 'Top universities & colleges. India & abroad.', href: '/loans?tab=education', color: '#0369a1', bg: '#f0f9ff' },
+  { icon: '🎓', title: 'Education Loan', rate: 'Special Rates', desc: 'All banks & NBFCs. India & abroad. Skill courses.', href: '/loans?tab=education', color: '#0369a1', bg: '#f0f9ff' },
   { icon: '🌐', title: 'Open Plot Loan', rate: '₹10L – ₹1000 Cr', desc: 'HMDA · DTCP · HUDA · Gramakantam · GP Plots.', href: '/loans?tab=plot', color: '#be123c', bg: '#fff1f2' },
-  { icon: '📊', title: 'Project Finance', rate: 'Large Scale', desc: 'Commercial, industrial & infrastructure projects.', href: '/loans?tab=project', color: '#6d28d9', bg: '#f5f3ff' },
-  { icon: '💳', title: 'Credit Cards', rate: 'All Banks', desc: 'Apply for credit cards from all major banks.', href: '/apply?type=creditcard', color: '#0f2b46', bg: '#e8eff5' },
-  { icon: '🔐', title: 'Private Finance', rate: 'Flexible', desc: 'Private lending solutions for special cases.', href: '/apply?type=private', color: '#9f1239', bg: '#fff1f2' },
-  { icon: '🛡️', title: 'Insurance', rate: 'All Types', desc: 'Life, health, vehicle & property insurance.', href: '/apply?type=insurance', color: '#166534', bg: '#f0fdf4' },
+  { icon: '📊', title: 'Project Finance', rate: 'Large Scale', desc: 'Apartments, Industrial Estates, IT Parks, Commercial Projects.', href: '/loans?tab=project', color: '#6d28d9', bg: '#f5f3ff' },
+  { icon: '💳', title: 'Credit Cards', rate: 'All Banks', desc: 'Lifetime free & reward cards. All major banks.', href: '/apply?type=creditcard', color: '#0f2b46', bg: '#e8eff5' },
+  { icon: '🛡️', title: 'Insurance Services', rate: 'All Types', desc: 'Life, Health, Vehicle, Property & Term insurance.', href: '/apply?type=insurance', color: '#166534', bg: '#f0fdf4' },
+  { icon: '🏦', title: 'Overdraft Facility', rate: 'Flexible', desc: 'OD against property, FD, salary & current account.', href: '/apply?type=overdraft', color: '#0f766e', bg: '#ecfdf5' },
+  { icon: '🔐', title: 'Private Finance', rate: 'Quick Disbursal', desc: 'Flexible private lending. CIBIL issues welcome.', href: '/apply?type=private', color: '#9f1239', bg: '#fff1f2' },
 ]
 
 export default function LoanProductsGrid() {
@@ -56,7 +57,9 @@ export default function LoanProductsGrid() {
           ))}
         </div>
 
-        <div className="text-center mt-10">
+        <p className="text-center text-xs text-gray-400 mt-5">*T&amp;C Apply. Interest rates subject to lender eligibility, credit profile &amp; market conditions.</p>
+
+        <div className="text-center mt-6">
           <Link
             href="/apply"
             className="inline-flex items-center gap-2 text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:opacity-90 transition-all hover:scale-105 text-base"

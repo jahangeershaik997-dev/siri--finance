@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://siri-finance-knax.vercel.app/apply' },
   openGraph: {
     title: 'Apply for a Loan — Siri Finance',
-    description: 'Apply in minutes. Get best offers from 50+ lenders. Free service.',
+    description: 'Apply in minutes. Get best offers from 1150+ lenders. Free service.',
     url: 'https://siri-finance-knax.vercel.app/apply',
   },
 }

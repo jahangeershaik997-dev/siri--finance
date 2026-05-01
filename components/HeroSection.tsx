@@ -63,7 +63,7 @@ export default function HeroSection() {
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-5 text-sm text-white/80">
-              {['100% Free Service', '50+ Lenders', 'CIBIL Issues OK', 'Instant Approval'].map(item => (
+              {['100% Free Service', '150+ Lenders', 'CIBIL Issues OK', 'Instant Approval'].map(item => (
                 <div key={item} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 flex-shrink-0" style={{ color: '#f7b733' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -103,14 +103,14 @@ export default function HeroSection() {
                 </div>
               </div>
               <a
-                href="tel:7095899552"
+                href="tel:9985899552"
                 className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-white font-semibold text-sm transition-all hover:opacity-90"
                 style={{ background: 'linear-gradient(135deg, #1c7fe8, #0F2B46)' }}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                70958 99552
+                99858 99552
               </a>
             </div>
           </div>

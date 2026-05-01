@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
               ))}
             </div>
             <div className="text-left">
-              <p className="font-bold text-navy text-sm">2,00,000+ Happy Customers</p>
+              <p className="font-bold text-navy text-sm">₹500 Cr+ Loans Disbursed</p>
               <p className="text-xs text-gray-500">4.8/5 average rating</p>
             </div>
           </div>

@@ -15,6 +15,7 @@ const PRODUCTS = [
   { href: '/loans?tab=plot', label: 'Open Plot Loan', icon: '🌐', desc: 'HMDA · DTCP · HUDA · GP Plots' },
   { href: '/loans?tab=project', label: 'Project Finance', icon: '📊', desc: 'Large scale project funding' },
   { href: '/loans?tab=private', label: 'Private Finance', icon: '🔐', desc: 'Flexible private lending' },
+  { href: '/apply?type=overdraft', label: 'Overdraft Facility', icon: '🏦', desc: 'OD against property, FD & salary' },
 ]
 
 const navLinks = [
