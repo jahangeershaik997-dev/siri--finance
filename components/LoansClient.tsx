@@ -6,13 +6,14 @@ import HomeLoanCard from '@/components/HomeLoanCard'
 import LoanFilters from '@/components/LoanFilters'
 import { ALL_LOANS, HOME_LOANS, filterLoans } from '@/lib/loanEngine'
 
-type LoanTab = 'personal' | 'home' | 'business' | 'lap'
+type LoanTab = 'personal' | 'home' | 'business' | 'lap' | 'insurance'
 
 const TABS: { id: LoanTab; label: string }[] = [
   { id: 'personal', label: 'Personal Loans' },
   { id: 'home', label: 'Home Loans' },
   { id: 'business', label: 'Business Loans' },
   { id: 'lap', label: 'Loan Against Property' },
+  { id: 'insurance', label: 'Insurance' },
 ]
 
 const BUSINESS_TYPES = [
@@ -173,6 +174,7 @@ function LoansContent() {
                   {filteredPersonalLoans.map((loan) => (
                     <LoanCard key={loan.id} loan={loan} highlighted={loan.featured} />
                   ))}
+                  <p className="text-xs text-gray-400 mt-1">*T&amp;C Apply. Rates subject to lender eligibility, CIBIL score &amp; salary profile.</p>
                 </div>
               )}
             </div>
@@ -318,6 +320,120 @@ function LoansContent() {
             </div>
           </div>
           <AdvisorCTA label="Get Loan Against Property / Private Finance — Best ROI for Your Profile" />
+        </div>
+      )}
+
+      {activeTab === 'insurance' && (
+        <div>
+          <div className="mb-6">
+            <p className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6">We offer all types of insurance from leading insurers</p>
+
+            {/* Life & Term */}
+            <div className="bg-red-50 border border-red-100 rounded-2xl p-6 mb-5">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-3xl">❤️</span>
+                <div>
+                  <h3 className="font-bold text-navy text-base">Life &amp; Term Insurance</h3>
+                  <p className="text-gray-500 text-sm">Secure your family's future with the right cover</p>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {[
+                  { name: 'LIC of India', desc: 'India\'s most trusted insurer. Jeevan Anand, Tech Term.' },
+                  { name: 'HDFC Life', desc: 'Click 2 Protect, Sanchay Plus, Smart Protect Plan.' },
+                  { name: 'SBI Life', desc: 'eShield, Smart Platina Plus, Retire Smart.' },
+                  { name: 'ICICI Prudential', desc: 'iProtect Smart, Guaranteed Income, Wealth Builder.' },
+                  { name: 'Max Life Insurance', desc: 'Online Term Plan Plus, Smart Secure Plus.' },
+                  { name: 'Bajaj Allianz Life', desc: 'eTouch Online Term, Future Wealth Gain.' },
+                ].map(ins => (
+                  <div key={ins.name} className="bg-white rounded-xl p-4 border border-gray-100">
+                    <p className="font-semibold text-navy text-sm">{ins.name}</p>
+                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">{ins.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Health */}
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-5">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-3xl">🏥</span>
+                <div>
+                  <h3 className="font-bold text-navy text-base">Health Insurance</h3>
+                  <p className="text-gray-500 text-sm">Individual, family floater &amp; group health plans</p>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {[
+                  { name: 'Star Health', desc: 'Comprehensive Health, Senior Citizens Red Carpet.' },
+                  { name: 'Niva Bupa', desc: 'ReAssure 2.0, Health Companion, MoneyBack.' },
+                  { name: 'Care Health Insurance', desc: 'Care Supreme, Care Plus, Senior Plan.' },
+                  { name: 'HDFC Ergo Health', desc: 'Optima Secure, My Health Suraksha.' },
+                  { name: 'Bajaj Allianz Health', desc: 'Health Guard, Global Health Care.' },
+                  { name: 'New India Assurance', desc: 'Mediclaim Policy, Top-up plans.' },
+                ].map(ins => (
+                  <div key={ins.name} className="bg-white rounded-xl p-4 border border-gray-100">
+                    <p className="font-semibold text-navy text-sm">{ins.name}</p>
+                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">{ins.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Motor */}
+            <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6 mb-5">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-3xl">🚗</span>
+                <div>
+                  <h3 className="font-bold text-navy text-base">Motor Insurance</h3>
+                  <p className="text-gray-500 text-sm">Car, bike &amp; commercial vehicle — own damage + third party</p>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {[
+                  { name: 'ICICI Lombard', desc: 'Comprehensive & third-party car/bike cover.' },
+                  { name: 'Bajaj Allianz General', desc: 'Motor Own Damage, bundled packages.' },
+                  { name: 'HDFC Ergo', desc: 'Car Insurance, Two-wheeler, Commercial.' },
+                  { name: 'New India Assurance', desc: 'Standard motor policy, fleet cover.' },
+                  { name: 'Reliance General', desc: 'Car & bike insurance, instant claim.' },
+                  { name: 'United India', desc: 'Motor policy for private & commercial.' },
+                ].map(ins => (
+                  <div key={ins.name} className="bg-white rounded-xl p-4 border border-gray-100">
+                    <p className="font-semibold text-navy text-sm">{ins.name}</p>
+                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">{ins.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Property & Other */}
+            <div className="bg-green-50 border border-green-100 rounded-2xl p-6 mb-5">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-3xl">🏠</span>
+                <div>
+                  <h3 className="font-bold text-navy text-base">Property &amp; Business Insurance</h3>
+                  <p className="text-gray-500 text-sm">Home, shop, office, factory &amp; business protection</p>
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {[
+                  { name: 'SBI General Insurance', desc: 'Home & shop package policy.' },
+                  { name: 'HDFC Ergo General', desc: 'Home Secure, Business Secure.' },
+                  { name: 'Tata AIG', desc: 'Property, liability & marine coverage.' },
+                  { name: 'National Insurance', desc: 'Householders, shopkeeper policies.' },
+                  { name: 'Oriental Insurance', desc: 'Standard fire, property package.' },
+                  { name: 'Bajaj Allianz', desc: 'Industrial All Risk, SME package.' },
+                ].map(ins => (
+                  <div key={ins.name} className="bg-white rounded-xl p-4 border border-gray-100">
+                    <p className="font-semibold text-navy text-sm">{ins.name}</p>
+                    <p className="text-xs text-gray-500 mt-1 leading-relaxed">{ins.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <AdvisorCTA label="Get Best Insurance Quotes — All Types, All Budgets" />
         </div>
       )}
     </div>

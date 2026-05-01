@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { LoanOffer } from '@/lib/loanEngine'
 import { formatCurrency } from '@/lib/utils'
+import BankLogo from './BankLogo'
 
 interface LoanCardProps {
   loan: LoanOffer
@@ -23,12 +24,7 @@ export default function LoanCard({ loan, highlighted = false }: LoanCardProps) {
 
       <div className="flex items-start justify-between mb-5">
         <div className="flex items-center gap-3">
-          <div
-            className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-xs shadow-sm"
-            style={{ backgroundColor: loan.color }}
-          >
-            {loan.bankInitials}
-          </div>
+          <BankLogo initials={loan.bankInitials} color={loan.color} size={48} />
           <div>
             <h3 className="font-semibold text-gray-900 text-sm leading-tight">{loan.bank}</h3>
             <span
@@ -41,7 +37,7 @@ export default function LoanCard({ loan, highlighted = false }: LoanCardProps) {
           </div>
         </div>
         <div className="text-right">
-          <p className="text-2xl font-bold text-navy">{loan.minRate}%</p>
+          <p className="text-2xl font-bold text-navy">{loan.minRate}%*</p>
           <p className="text-xs text-gray-500 -mt-0.5">p.a. onwards</p>
         </div>
       </div>
