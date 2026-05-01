@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     'monthly EMI calculator',
     'home loan EMI calculator',
   ],
-  alternates: { canonical: 'https://siri-finance-knax.vercel.app/emi-calculator' },
+  alternates: { canonical: 'https://www.sirifintech.com/emi-calculator' },
   openGraph: {
     title: 'Free EMI Calculator — Siri Finance',
     description: 'Calculate personal loan EMI instantly. Free tool. Adjust amount, rate & tenure.',
-    url: 'https://siri-finance-knax.vercel.app/emi-calculator',
+    url: 'https://www.sirifintech.com/emi-calculator',
   },
 }
 

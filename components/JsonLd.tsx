@@ -4,9 +4,9 @@ export default function JsonLd() {
     '@graph': [
       {
         '@type': 'FinancialService',
-        '@id': 'https://siri-finance-knax.vercel.app/#organization',
+        '@id': 'https://www.sirifintech.com/#organization',
         name: 'Siri Finance',
-        url: 'https://siri-finance-knax.vercel.app',
+        url: 'https://www.sirifintech.com',
         description:
           'India\'s smart loan aggregation platform. Compare personal loans, home loans, and business loans from 150+ lenders.',
         areaServed: 'IN',
@@ -26,13 +26,13 @@ export default function JsonLd() {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://siri-finance-knax.vercel.app/#website',
-        url: 'https://siri-finance-knax.vercel.app',
+        '@id': 'https://www.sirifintech.com/#website',
+        url: 'https://www.sirifintech.com',
         name: 'Siri Finance',
         description: 'Smart Loans. Faster Decisions.',
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://siri-finance-knax.vercel.app/loans?q={search_term_string}',
+          target: 'https://www.sirifintech.com/loans?q={search_term_string}',
           'query-input': 'required name=search_term_string',
         },
       },

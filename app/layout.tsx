@@ -9,7 +9,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const BASE_URL = 'https://siri-finance-knax.vercel.app'
+const BASE_URL = 'https://www.sirifintech.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

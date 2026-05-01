@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   description:
     'Apply for a personal loan, home loan, or business loan in minutes. Get matched with the best offers from SBI, HDFC, ICICI & more. Our advisor will call you within 24 hours.',
   keywords: ['apply personal loan online', 'personal loan application', 'home loan apply', 'instant loan approval India'],
-  alternates: { canonical: 'https://siri-finance-knax.vercel.app/apply' },
+  alternates: { canonical: 'https://www.sirifintech.com/apply' },
   openGraph: {
     title: 'Apply for a Loan — Siri Finance',
     description: 'Apply in minutes. Get best offers from 1150+ lenders. Free service.',
-    url: 'https://siri-finance-knax.vercel.app/apply',
+    url: 'https://www.sirifintech.com/apply',
   },
 }
 

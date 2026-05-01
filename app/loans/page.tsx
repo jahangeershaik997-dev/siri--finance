@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     'Bajaj Finance personal loan',
     'instant personal loan approval',
   ],
-  alternates: { canonical: 'https://siri-finance-knax.vercel.app/loans' },
+  alternates: { canonical: 'https://www.sirifintech.com/loans' },
   openGraph: {
     title: 'Compare Personal Loan Offers — Siri Finance',
     description: 'Compare 150+ loan offers from top banks & NBFCs. Free service. No CIBIL impact.',
-    url: 'https://siri-finance-knax.vercel.app/loans',
+    url: 'https://www.sirifintech.com/loans',
   },
 }
 
