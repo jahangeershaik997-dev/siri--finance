@@ -91,6 +91,17 @@ export default function PropertyLoansSection() {
           </div>
         </div>
 
+        {/* CIBIL + No Income Proof highlight */}
+        <div className="bg-white/10 border border-white/20 rounded-2xl p-5 mb-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+          <div className="text-3xl flex-shrink-0">✅</div>
+          <div>
+            <p className="text-white font-bold text-base">CIBIL Issue Cases &amp; No Income Proof Cases — Also Handled</p>
+            <p className="text-white/70 text-sm mt-1">
+              Cash salary, cash rentals, self-construction, gramakantam properties, old city &amp; unauthorised floors — all accepted. Contact us to discuss your specific case.
+            </p>
+          </div>
+        </div>
+
         {/* Best ROI + CTA */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 bg-white/10 border border-gold/30 rounded-2xl p-7">
           <div>

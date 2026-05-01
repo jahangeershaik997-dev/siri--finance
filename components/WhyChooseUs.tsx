@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-14">
           <p className="text-gold-dark font-semibold text-sm uppercase tracking-wide mb-2">Why Us</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4">
-            Why Choose Siri Finance?
+            Why Choose Siri Financial Services?
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             We make loan comparison simple, fast, and completely free. Here&apos;s what sets us apart from the rest.

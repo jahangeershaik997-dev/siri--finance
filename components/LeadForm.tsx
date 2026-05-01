@@ -77,7 +77,7 @@ export default function LeadForm({ prefilledAmount = '', prefilledBank = '' }: L
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
           subject: `New Loan Application — ${formData.name}`,
-          from_name: 'Siri Finance',
+          from_name: 'Siri Financial Services',
           ...formData,
           bank: prefilledBank || 'Not specified',
         }),

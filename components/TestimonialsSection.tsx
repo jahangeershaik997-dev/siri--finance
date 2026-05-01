@@ -3,7 +3,7 @@ const testimonials = [
     name: 'Priya Sharma',
     location: 'Mumbai, Maharashtra',
     rating: 5,
-    text: 'Got a personal loan at 10.5% through Siri Finance. The process was incredibly smooth and my loan was disbursed in just 2 days. The team helped me compare 15+ offers before I chose HDFC. Highly recommended!',
+    text: 'Got a personal loan at 10.5% through Siri Financial Services. The process was incredibly smooth and my loan was disbursed in just 2 days. The team helped me compare 15+ offers before I chose HDFC. Highly recommended!',
     loan: 'Personal Loan ₹5L',
     initials: 'PS',
     bgColor: 'bg-purple-100',
@@ -13,7 +13,7 @@ const testimonials = [
     name: 'Rahul Gupta',
     location: 'Bengaluru, Karnataka',
     rating: 5,
-    text: 'As a freelancer with irregular income, I was worried about getting a loan. Siri Finance found me a Bajaj Finance loan with flexible EMI options that perfectly suited my cashflow. Great service, great team!',
+    text: 'As a freelancer with irregular income, I was worried about getting a loan. Siri Financial Services found me a Bajaj Finance loan with flexible EMI options that perfectly suited my cashflow. Great service, great team!',
     loan: 'Personal Loan ₹2L',
     initials: 'RG',
     bgColor: 'bg-navy-100',
@@ -23,7 +23,7 @@ const testimonials = [
     name: 'Anita Patel',
     location: 'Ahmedabad, Gujarat',
     rating: 5,
-    text: 'The EMI calculator helped me plan my finances. I compared 10+ offers and chose the best one. Saved almost ₹18,000 in total interest by switching from my bank\'s quote to the one Siri Finance found me!',
+    text: 'The EMI calculator helped me plan my finances. I compared 10+ offers and chose the best one. Saved almost ₹18,000 in total interest by switching from my bank\'s quote to the one Siri Financial Services found me!',
     loan: 'Home Improvement ₹15L',
     initials: 'AP',
     bgColor: 'bg-green-100',
@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
           <p className="text-gold-dark font-semibold text-sm uppercase tracking-wide mb-2">Testimonials</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4">Trusted by Thousands</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Real stories from real people who found their perfect loan through Siri Finance.
+            Real stories from real people who found their perfect loan through Siri Financial Services.
           </p>
         </div>
 

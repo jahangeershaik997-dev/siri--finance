@@ -2,36 +2,65 @@ interface SiriFinanceLogoProps {
   size?: number
   showText?: boolean
   textColor?: string
+  subtitleColor?: string
 }
 
-export default function SiriFinanceLogo({ size = 36, showText = true, textColor = '#0F2B46' }: SiriFinanceLogoProps) {
+export default function SiriFinanceLogo({
+  size = 40,
+  showText = true,
+  textColor = '#0F2B46',
+  subtitleColor = '#e05526',
+}: SiriFinanceLogoProps) {
   return (
     <div className="flex items-center gap-2.5">
       <svg
         width={size}
         height={size}
-        viewBox="0 0 40 40"
+        viewBox="0 0 80 80"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        aria-label="Siri Finance"
+        aria-label="Siri Financial Services"
       >
-        {/* Outer gold ring */}
-        <circle cx="20" cy="20" r="19" fill="#0F2B46" />
-        <circle cx="20" cy="20" r="19" stroke="#D4A843" strokeWidth="1.5" />
-        {/* Inner coin lines */}
-        <circle cx="20" cy="20" r="14" fill="none" stroke="#D4A843" strokeWidth="0.6" strokeOpacity="0.4" />
-        {/* Rupee symbol path */}
-        <line x1="13" y1="13.5" x2="27" y2="13.5" stroke="#D4A843" strokeWidth="2" strokeLinecap="round" />
-        <line x1="13" y1="18" x2="27" y2="18" stroke="#D4A843" strokeWidth="2" strokeLinecap="round" />
-        <path d="M16 18 L24 29" stroke="#D4A843" strokeWidth="2" strokeLinecap="round" />
-        <path d="M13 13.5 L13 18 L13 29" stroke="#D4A843" strokeWidth="2" strokeLinecap="round" />
-        <path d="M13.5 14.5 C13.5 14.5 16 14.5 18.5 14.5 C21.5 14.5 23.5 15.5 23.5 17.5 C23.5 19 22 19.5 19.5 19.5 L13.5 19.5" stroke="#D4A843" strokeWidth="0.5" strokeOpacity="0" />
+        {/* Outer blue arc — ~270°, opening to upper-right */}
+        <path
+          d="M 63 17 A 33 33 0 1 0 63 63"
+          stroke="#1c7fe8"
+          strokeWidth="5.5"
+          strokeLinecap="round"
+          fill="none"
+        />
+        {/* Inner orange-red arc */}
+        <path
+          d="M 53 55 A 22 22 0 0 0 53 25"
+          stroke="#e05526"
+          strokeWidth="4.5"
+          strokeLinecap="round"
+          fill="none"
+        />
+        {/* SFS text — blue S, purple-blend F, orange-red S */}
+        <text
+          x="33"
+          y="51"
+          fontSize="23"
+          fontWeight="900"
+          fontFamily="Arial Black, Arial, sans-serif"
+          textAnchor="middle"
+        >
+          <tspan fill="#1c7fe8">S</tspan>
+          <tspan fill="#7b3bbf">F</tspan>
+          <tspan fill="#e05526">S</tspan>
+        </text>
       </svg>
+
       {showText && (
-        <span className="text-xl font-bold leading-none" style={{ color: textColor }}>
-          Siri{' '}
-          <span style={{ color: '#D4A843' }}>Finance</span>
-        </span>
+        <div className="leading-tight">
+          <span className="text-base font-bold block" style={{ color: textColor }}>
+            Siri Financial
+          </span>
+          <span className="text-xs font-extrabold tracking-widest block uppercase" style={{ color: subtitleColor }}>
+            Services
+          </span>
+        </div>
       )}
     </div>
   )
